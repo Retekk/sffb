@@ -1,11 +1,11 @@
 package divisible;
 
 import com.r.sffb.divisible.FizzBuzzDivisible;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
@@ -20,7 +20,7 @@ public class FizzBuzzDivisibleTest {
 
     @Test
     void testFizzBuzzDivisibleConstructorWithZeroDenominator() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> new FizzBuzzDivisible(0, "zeroDenominator"));
+        assertThrows(IllegalArgumentException.class, () -> new FizzBuzzDivisible(0, "zeroDenominator"));
     }
 
     @Test
